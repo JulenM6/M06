@@ -1,0 +1,55 @@
+<html>
+    <title>demo daw 2</title>
+        <head></head>
+        <script>
+
+            var x = "hola";
+            console.log(x);
+            x = "adeu";
+            console.log(x);
+            x = 9;
+            console.log(x);
+
+            let(m)="sdasd";
+            console.log(m);
+            m=9;
+            console.log(m);
+
+            function validation(){
+                
+                let user = document.getElementById("login").value;
+                let pass = document.getElementById("pass").value;
+                
+
+
+                if(user.length === 0){
+                    document.getElementById("login").style.borderColor="red";
+                    
+
+                }
+            }
+
+        </script>
+        <style lang="css">
+            body {
+                margin: 3%;
+            }
+            
+        </style>
+        <body>
+            <H1>TEST</H1>
+            <div>
+                <h2>daw 2</h2><br /><hr/>
+                <input type="text" name="login" id="login" placeholder="escriu algo" required/>
+                <input type="password" name="pass" id="pass" placeholder="contrasenya" />
+                <input type="button" onclick="validation()" value="envia"/>
+               
+
+            </div>
+        </body>
+        <script>
+            console.log("fora clau");
+
+            
+        </script>
+    

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<title>correuIcontrasenya</title>
+
+<head></head>
+<script>
+
+    /* var x = "hola";
+     console.log(x);
+     x = "adeu";
+     console.log(x);
+     x = 9;
+     console.log(x);
+
+     let(m)="sdasd";
+     console.log(m);
+     m=9;
+     console.log(m);length
+     */
+
+    function validation() {
+
+        let user = document.getElementById("correu").value;
+        let pass = document.getElementById("pass").value;
+
+        if (user != "julenmartinez@iesmontsia.org" && pass != "contrasenya") {
+            document.getElementById("correu").style.borderColor = "red";
+            document.getElementById("pass").style.borderColor = "red";
+            document.getElementById("title").innerText = "error";   
+        }
+        else {
+            document.getElementById("correu").style.borderColor = "green";
+            document.getElementById("pass").style.borderColor = "green";
+            document.getElementById("title").style.visibility = "hidden";
+            redireccio();
+            document.getElementById("Enviar").style.visibility = "hidden";
+        }
+    }
+
+    function redireccio() {
+        setTimeout(function () {window.location.href = "https://agora.xtec.cat/insmontsia/"; }, 5000);
+    }
+
+</script>
+<style lang="css">
+    body {
+        margin: 3%;
+    }
+</style>
+
+<body>
+    <H1 id="title"></H1>
+    <div>
+        <h2>Demanar correu i contrasenya</h2><br />
+        <hr />
+
+        <input type="email" name="correu" id="correu" placeholder="escriu algo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+        ̣̣<input type="password" name="pass" id="pass" placeholder="contrasenya" required />
+        <input type="submit" onclick="validation()" name="Enviar" id="Enviar" value="Enviar">
+
+    </div>
+</body>

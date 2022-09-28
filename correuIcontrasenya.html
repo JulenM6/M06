@@ -19,6 +19,7 @@
      */
 
     function validation() {
+        formatCorreu();
 
         let user = document.getElementById("correu").value;
         let pass = document.getElementById("pass").value;
@@ -37,9 +38,31 @@
         }
     }
 
+    function formatCorreu(){
+
+        let user = document.getElementById("correu").value;
+        var email = false;
+        var validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/.test(user);
+
+        if(validEmail == true){
+            email=true
+            document.getElementById("correu").style.borderColor = "green";s
+            return email;
+
+        }
+        else{
+            document.getElementById("correu").style.borderColor = "red";
+            alert("el correu esta mal escrit")
+            return email;
+
+
+        }
+    }
+
     function redireccio() {
         setTimeout(function () {window.location.href = "https://agora.xtec.cat/insmontsia/"; }, 5000);
     }
+    
 
 </script>
 <style lang="css">
